@@ -41,7 +41,7 @@ const clients = [
 const getTotalBalanceByGender = (users, gender) => { 
     return users
         .filter((user) => user.gender === gender)
-        .reduce((sum, user) => user.balance += sum, 0);
+        .reduce((sum, user) => sum += user.balance, 0);
 };
 
 console.log(getTotalBalanceByGender(clients, "male")); // 12053
